@@ -98,11 +98,16 @@
     .about h2 { margin: 12px 0 18px; font-size: clamp(2.5rem, 5vw, 4.6rem); line-height: .92; }
     .about h2 span { color: var(--yellow); }
     .about-copy { color: var(--muted); font-size: 1.05rem; line-height: 1.75; }
-    .motto { position: relative; padding: 40px 34px; border: 2px solid rgba(255,255,255,.42); border-radius: 28px; background: linear-gradient(145deg, rgba(77,91,186,.55), rgba(28,34,86,.75)); box-shadow: 0 18px 35px rgba(0,0,0,.22); text-align: center; overflow: hidden; }
+    .motto { position: relative; display: block; padding: 40px 34px; border: 2px solid rgba(255,255,255,.42); border-radius: 28px; background: linear-gradient(145deg, rgba(77,91,186,.55), rgba(28,34,86,.75)); box-shadow: 0 18px 35px rgba(0,0,0,.22); color: inherit; text-align: center; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; overflow: hidden; }
+    .motto:hover { transform: translateY(-6px) rotate(-.5deg); box-shadow: 0 20px 35px rgba(0,0,0,.35), 0 0 20px rgba(101,177,255,.2); }
     .motto::before, .motto::after { content: "✦"; position: absolute; color: var(--yellow); font-size: 3rem; opacity: .8; }
     .motto::before { top: 14px; left: 25px; }
     .motto::after { right: 25px; bottom: 14px; color: var(--pink); }
-    .motto small { display: block; margin-bottom: 16px; color: #aebcff; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+    .motto-heading { position: relative; height: 18px; color: #aebcff; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+    .motto-arrow { display: block; width: 100%; height: 42px; margin: 2px auto 6px; overflow: visible; }
+    .motto-arrow path { fill: none; stroke: var(--yellow); stroke-linecap: round; stroke-linejoin: round; stroke-width: 3; filter: drop-shadow(0 0 4px rgba(255,223,101,.7)); }
+    .motto-title { display: inline-block; }
+    .motto-game-note { position: absolute; top: 1px; left: calc(50% + 52px); color: #dbe5ff; font-size: .55em; letter-spacing: .08em; line-height: 1.35; }
     .motto strong { display: block; color: white; font-size: clamp(2.2rem, 6vw, 4.8rem); line-height: .9; letter-spacing: -.08em; text-shadow: 3px 3px 0 #6b3e9d, 6px 6px 0 #241742, 0 0 16px rgba(255,255,255,.35); }
 
     @media (min-width: 701px) {
@@ -211,7 +216,7 @@
           <h2 id="about-title">I like to <span>build</span> things.</h2>
           <p class="about-copy">I’m Radean. I enjoy turning curious ideas into real projects—whether that means writing code, solving a tricky math problem, or making a game from scratch. Building is how I learn: start small, stay curious, and keep improving one idea at a time.</p>
         </div>
-        <div class="motto"><small>My motto</small><strong>AI<br>IS LIFE</strong></div>
+        <a class="motto" href="https://flap-dash-woad.vercel.app" target="_blank" rel="noopener noreferrer"><div class="motto-heading"><span class="motto-title">My motto</span><span class="motto-game-note">Click Here To<br>View My Best Game:</span></div><svg class="motto-arrow" viewBox="0 0 100 70" aria-hidden="true"><path d="M50 5 C21 28, 78 29, 57 57 M48 49 L57 58 L65 47" /></svg><strong>AI<br>IS LIFE</strong></a>
       </section>
     </main>
   </div>
